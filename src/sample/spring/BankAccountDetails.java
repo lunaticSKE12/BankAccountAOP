@@ -7,6 +7,7 @@ public class BankAccountDetails {
     private int accountId;
     private int balanceAmount;
     private Date lastTransactionTimestamp;
+    private final String signature = "5710546259";
 
     public int getAccountId() {
         return accountId;
@@ -34,7 +35,7 @@ public class BankAccountDetails {
 
     @Override
     public String toString() {
-        return "sample.spring.BankAccountDetails [accountId=" + accountId
+        return signature + " sample.spring.BankAccountDetails [accountId=" + accountId
                 + ", balanceAmount=" + balanceAmount
                 + ", lastTransactionTimestamp=" + lastTransactionTimestamp
                 + "]";

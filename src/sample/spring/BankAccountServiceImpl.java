@@ -9,10 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service(value = "bankAccountService")
 public class BankAccountServiceImpl implements BankAccountService {
 
-    static {
-        org.apache.log4j.BasicConfigurator.configure();
-    }
-
     private static Logger logger = Logger
             .getLogger(BankAccountServiceImpl.class);
     @Autowired
@@ -20,7 +16,7 @@ public class BankAccountServiceImpl implements BankAccountService {
 
     @Override
     public int createBankAccount(BankAccountDetails bankAccountDetails) {
-        logger.info("createBankAccount method invoked");
+        logger.info(String.format("createBankAccount method invoked with params (BankAccountDetails=%s", bankAccountDetails.toString() ));
         return bankAccountDao.createBankAccount(bankAccountDetails);
     }
 }
