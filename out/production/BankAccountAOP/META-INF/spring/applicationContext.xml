@@ -7,4 +7,6 @@
 
     <context:component-scan base-package="sample.spring" />
     <aop:aspectj-autoproxy proxy-target-class="false" expose-proxy="true" />
+
+    <bean name="loggingAspect" class="sample.spring.aspects.LoggingAspect" />
 </beans>

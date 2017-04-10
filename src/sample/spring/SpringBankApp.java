@@ -15,7 +15,7 @@ public class SpringBankApp {
         ApplicationContext context = new ClassPathXmlApplicationContext(
                 "classpath:META-INF/spring/applicationContext.xml");
         BankAccountService bankAccountService = context
-                .getBean(BankAccountService.class);
+                .getBean("bankAccountService", BankAccountService.class);
         BankAccountDetails bankAccountDetails = new BankAccountDetails();
         bankAccountDetails.setBalanceAmount(1000);
         bankAccountDetails.setLastTransactionTimestamp(new Date());
